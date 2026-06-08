@@ -20,3 +20,18 @@ h1 {
   margin-bottom: 20px;
   text-align: center;
 }
+
+p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  text-align: left;
+  margin: 10px 20px 10px 20px;
+}
