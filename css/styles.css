@@ -14,9 +14,9 @@
 }
 
 :root {
-  --paper: #dddad4; /* paper base */
-  --grid: #ceccca; /* light grid color */
-  --dash: #ceccca; /* dashed guideline color */
+  --paper: #f0ede8; /* paper base */
+  --grid: #dfdddb; /* light grid color */
+  --dash: #dfdddb; /* dashed guideline color */
   --scale: 10px; /* grid size */
 }
 
@@ -78,7 +78,7 @@ a:hover {
 
 h1 {
   position: relative;
-  padding-top: 60px;
+  padding-top: 80px;
   color: #333;
   font-size: 36px;
   margin-bottom: 20px;
