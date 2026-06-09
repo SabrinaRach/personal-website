@@ -1,5 +1,4 @@
 * {
-  background-color: #adcef3;
   font-family:
     system-ui,
     -apple-system,
@@ -14,6 +13,48 @@
   padding: 0;
 }
 
+:root {
+  --paper: #dddad4; /* paper base */
+  --grid: #ceccca; /* light grid color */
+  --dash: #ceccca; /* dashed guideline color */
+  --scale: 10px; /* grid size */
+}
+
+/* base paper color */
+.drafting-paper {
+  background-color: var(--paper);
+  /* main grid (thin lines) */
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px),
+    /* a secondary lighter grid every 4 cells (optional) */
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size:
+    var(--scale) var(--scale),
+    var(--scale) var(--scale),
+    calc(var(--scale) * 4) calc(var(--scale) * 4),
+    calc(var(--scale) * 4) calc(var(--scale) * 4);
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  min-height: 100vh;
+}
+
+/* dashed vertical guideline (example at 150px from left) */
+.drafting::before {
+  content: "";
+  position: fixed;
+  left: 150px; /* move guideline */
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px dashed var(--dash);
+  pointer-events: none;
+}
+
 header {
   position: fixed;
   z-index: 99999;
@@ -25,7 +66,7 @@ header {
 }
 
 nav a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   margin: 0 15px;
   font-size: 18px;
