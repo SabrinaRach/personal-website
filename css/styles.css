@@ -112,19 +112,34 @@ h2 {
   justify-content: center;
 }
 
-section > div {
-  display: flex;
-  flex-wrap: wrap;
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.project-gallery img {
+.project img {
   display: block;
-  margin: 0 auto;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  object-fit: cover;
   border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.project figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
 }
 
 .button {
@@ -134,5 +149,5 @@ section > div {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 5px;
 }
