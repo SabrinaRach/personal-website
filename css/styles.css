@@ -127,13 +127,21 @@ h2 {
   text-align: center;
 }
 
-.project img {
+.project-figure {
   display: block;
+  overflow: visible;
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 1px solid #333;
   border-radius: 5px;
+}
+
+.project-figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #333;
 }
 
 .project figcaption {
