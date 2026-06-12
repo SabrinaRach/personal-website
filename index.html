@@ -8,15 +8,16 @@
   </head>
   <body class="drafting-paper">
     <header>
-      <nav>
-        <a href="#">Home</a>
+      <nav aria-label="Main Navigation">
+        <a href="#" aria-current="page">Home</a>
+        <!-- aria-current="page" zeigt an, wo sich der User gerade befindet -->
         <a href="#">Projects</a>
         <a href="#">Patterns</a>
         <a href="#">Tips & Tricks</a>
         <a href="#">About Me</a>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <section>
         <h1>🪡 Welcome to My Sewing Diary</h1>
         <p>
@@ -24,8 +25,8 @@
           tips for fellow sewing enthusiasts!
         </p>
       </section>
-      <section>
-        <h2>Latest Projects</h2>
+      <section aria-labelledby="latest-projects-heading">
+        <h2 id="latest-projects-heading">Latest Projects</h2>
         <p class="latest-projects">
           Check out some of my recent sewing projects!
         </p>
@@ -34,16 +35,18 @@
             <!--use figure to group image and caption together-->
             <img
               src="pictures/green_jacket.png"
-              alt="Green Jacket"
+              alt="Green jacket"
               width="200"
               height="200"
             />
-            <figcaption><a class="button" href="#">Green Jacket</a></figcaption>
+            <figcaption>
+              <a class="button" href="#">Green Jacket</a>
+            </figcaption>
           </figure>
           <figure class="project-figure">
             <img
               src="pictures/neckholder_dress_with_blue_flowers.png"
-              alt="Neckholder Dress with blue Flowers"
+              alt="Neckholder dress with blue flowers"
               width="200"
               height="200"
             />
@@ -54,11 +57,13 @@
           <figure class="project-figure">
             <img
               src="pictures/short_jacket_with_flowers.png"
-              alt="Short Jacket with blue Flowers"
+              alt="Short jacket with blue Flowers"
               width="200"
               height="200"
             />
-            <figcaption><a class="button" href="#">Short Jacket</a></figcaption>
+            <figcaption>
+              <a class="button" href="#">Short Jacket</a>
+            </figcaption>
           </figure>
         </div>
       </section>
